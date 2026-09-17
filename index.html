@@ -4,9 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>郭家钰 · 个人主页</title>
+  <!-- Google Fonts 改为「非阻塞」加载（2026-09-17）：
+       国内网络经常访问不到 fonts.googleapis.com，若作为阻塞式样式表，
+       浏览器会一直等它超时，首屏白白空着。下面用 media="print" 技巧
+       让它在后台加载，加载完自动切回 all；失败则由 css/style.css 里
+       已声明的 Georgia / "Times New Roman" 衬线字体兜底，功能不受影响。 -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" media="print" onload="this.media='all'"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" />
+  </noscript>
   <link rel="stylesheet" href="css/style.css" />
   <style>
     /* V3 反馈提交状态提示（局部样式，不影响站点其余部分） */
@@ -294,8 +303,10 @@
     </div>
     <button id="pagerHome" class="pager-home" type="button" aria-label="返回主页">主页</button>
   </div>
-  <!-- V3：Supabase 官方客户端（必须在 main.js 之前加载） -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- V3：Supabase 官方客户端（必须在 main.js 之前加载）
+       本地化托管 v2.116.0，不再依赖境外 CDN：国内网络下 CDN 常被拦截，
+       会导致 window.supabase 加载失败、留言无法提交。 -->
+  <script src="js/supabase-js.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
