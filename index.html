@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>郭家钰 · 个人主页</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* V3 反馈提交状态提示（局部样式，不影响站点其余部分） */
+    .suggest-status { margin-top: 12px; font-size: 0.95rem; line-height: 1.6; min-height: 1.4em; }
+    .suggest-status.is-pending { color: var(--muted); }
+    .suggest-status.is-ok { color: #2f7d5b; font-weight: 600; }
+    .suggest-status.is-error { color: #c06060; font-weight: 600; }
+    html[data-theme="night"] .suggest-status.is-ok { color: #7ed8ce; }
+    html[data-theme="night"] .suggest-status.is-error { color: #ff9b9b; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar-tools">
+    <button id="langToggle" type="button">English</button>
+    <button id="themeToggle" type="button">夜间</button>
+  </div>
+
+
+  <main class="page">
+
+    <!-- 主页：专辑封面式（名字 / 头像=唱片 / 简介 / 右栏索引栏） -->
+    <section class="view active" id="view-home">
+      <div class="home-cover">
+        <svg class="cover-eeg-defs" aria-hidden="true" focusable="false"><defs><path id="eegTrace1" fill="none" d="M0 229.5L50 231.3L148 218.1L174 219L220 224.9L230 217.6L244 183.5L250 176.7L256 184.8L270 221.6L280 230.6L302 230.1L374 218.9L412 218.8L502 233.9L554 254.7L568 251.7L602 227.5L624 219.5L658 219.4L736 231.3L774 231L864 215.2L882 208.7L912 192.9L924 190L940 194.1L978 222L1000 229.7L1024 229.6L1084 220L1114 218L1144 220.1L1200 229.5"/><path id="eegTrace2" fill="none" d="M0 420.4L90 407.1L106 401L134 384.9L148 381.5L164 386.9L194 409.6L210 418L232 424L268 428.6L338 428.5L448 413.5L492 410.1L538 411.5L606 419.6L612 418L618 412.7L634 378.8L640 373.5L646 380.4L664 421.2L672 427.4L682 429.4L744 428L870 411.3L926 410.7L952 413.4L972 418.3L988 425.8L1018 445.2L1034 449.5L1046 447.5L1088 432.7L1200 420.4"/><path id="eegTrace3" fill="none" d="M0 612.7L50 622.1L72 624L154 612.1L176 613.2L242 624L264 622.4L308 614.1L324 613.7L342 618.4L380 643.1L396 647L410 643.3L456 620L494 612.2L518 613.1L582 623.9L604 622.8L650 613.9L672 612L694 613.8L742 623L762 623.3L770 620.2L776 614.4L794 578.2L800 572.2L806 575.6L820 600.1L830 609.5L878 616.3L956 638.4L974 636.5L1010 619.9L1028 615.6L1104 624L1172 612.8L1200 612.7"/><path id="eegTrace4" fill="none" d="M0 308.5L106 292.5L158 292.1L192 296.9L220 303.7L238 311.9L266 330L280 334L294 330.4L324 312L342 304.6L378 296.6L414 291.8L464 292.7L562 308L608 307.9L672 297.6L690 292.5L698 284.5L714 249.4L720 243.4L726 248.8L742 282.2L750 289.4L846 306.3L898 308.6L978 299.2L1036 312L1078 301L1094 299.4L1162 308L1200 308.5"/><path id="eegTrace5" fill="none" d="M0 493.3L26 493.9L84 504.5L106 504.8L126 497.7L162 471.7L178 468.4L190 471.9L234 492.8L294 506.1L328 505.9L400 493.3L442 496.4L472 507.1L506 534.8L518 539.7L532 534.5L566 503.9L590 494.8L626 493.9L684 504.8L708 507L732 505.4L804 493.1L826 493.9L866 500L878 493.7L894 468.4L900 464.7L906 469.2L922 496.5L934 503.7L988 494.6L1012 493L1036 495.2L1090 505.7L1116 506.9L1200 493.3"/><path id="eegTrace6" fill="none" d="M0 694.1L84 684.4L136 682L178 683.8L266 693.6L292 694.5L314 690.5L350 676L364 674.4L406 686.4L424 688.9L522 682.2L588 685.2L612 691.8L648 714.2L664 718.3L718 699.8L788 695.3L892 683.7L954 682.4L1038 689.4L1048 685L1064 661.8L1070 658.2L1076 663.1L1092 689.6L1102 696L1144 697.9L1200 694.1"/></defs></svg>
+        <div class="cover-left">
+          <svg class="cover-eeg" viewBox="0 0 2400 800" preserveAspectRatio="none" aria-hidden="true" focusable="false"><g class="eeg-flow"><use class="eeg-t-2" href="#eegTrace1" xlink:href="#eegTrace1"/><use class="eeg-t-2" href="#eegTrace1" xlink:href="#eegTrace1" x="1200"/><use class="eeg-t-1" href="#eegTrace2" xlink:href="#eegTrace2"/><use class="eeg-t-1" href="#eegTrace2" xlink:href="#eegTrace2" x="1200"/><use class="eeg-t0" href="#eegTrace3" xlink:href="#eegTrace3"/><use class="eeg-t0" href="#eegTrace3" xlink:href="#eegTrace3" x="1200"/></g></svg>
+          <div class="cover-head">
+            <h1 class="cover-name" data-i18n="home.name">郭家钰</h1>
+            <p class="cover-major" data-i18n="home.major"><span class="term">智能医学工程</span>|<span class="term">脑机接口</span>方向·本科在读</p>
+          </div>
+          <p class="cover-sub" data-i18n="home.sub">PERSONAL PORTFOLIO</p>
+          <div class="cover-orb" aria-label="头像">
+            <span class="cover-avatar-emoji">🐱</span>
+          </div>
+          <p class="cover-intro" data-i18n="home.tagline">Decoding the Brain</p>
+        </div>
+        <div class="cover-right">
+          <svg class="cover-eeg" viewBox="0 0 2400 800" preserveAspectRatio="none" aria-hidden="true" focusable="false"><g class="eeg-flow"><use class="eeg-t1" href="#eegTrace4" xlink:href="#eegTrace4"/><use class="eeg-t1" href="#eegTrace4" xlink:href="#eegTrace4" x="1200"/><use class="eeg-t2" href="#eegTrace5" xlink:href="#eegTrace5"/><use class="eeg-t2" href="#eegTrace5" xlink:href="#eegTrace5" x="1200"/><use class="eeg-t3" href="#eegTrace6" xlink:href="#eegTrace6"/><use class="eeg-t3" href="#eegTrace6" xlink:href="#eegTrace6" x="1200"/></g></svg>
+          <nav class="side-nav" aria-label="索引">
+            <a href="#view-home" class="side-item active" style="--x:0px" data-target="view-home" data-i18n="nav.home">主页</a>
+            <a href="#view-info" class="side-item" style="--x:34px" data-target="view-info" data-i18n="nav.info">个人信息</a>
+            <a href="#view-chat" class="side-item" style="--x:64px" data-target="view-chat" data-i18n="nav.chat">数字分身</a>
+            <a href="#view-contact" class="side-item" style="--x:84px" data-target="view-contact" data-i18n="nav.contact">联系我</a>
+            <a href="#view-projects" class="side-item" style="--x:84px" data-target="view-projects" data-i18n="nav.projects">项目展示</a>
+            <a href="#view-suggest" class="side-item" style="--x:64px" data-target="view-suggest" data-i18n="nav.suggest">建议留言</a>
+            <a href="#view-education" class="side-item" style="--x:34px" data-target="view-education" data-i18n="nav.education">教育背景</a>
+            <a href="#view-intern" class="side-item" style="--x:0px" data-target="view-intern" data-i18n="nav.intern">实习经历</a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- 个人信息 -->
+    <section class="view" id="view-info">
+      <section class="card">
+        <h2><span class="dot"></span><span data-i18n="info.title">个人信息 👤</span></h2>
+        <ul class="info-list">
+          <li><span class="label" data-i18n="info.role">身份</span><span class="value" data-i18n="info.roleV">学生 · 大学新生</span></li>
+          <li><span class="label" data-i18n="info.doing">正在做</span><span class="value" data-i18n="info.doingV">大一课程的学习</span></li>
+          <li><span class="label" data-i18n="info.interest">兴趣</span><span class="value" data-i18n="info.interestV">音乐、乐器、猫</span></li>
+          <li><span class="label" data-i18n="info.trait">一个特点</span><span class="value" data-i18n="info.traitV">超级讨厌早起 😴</span></li>
+          <li><span class="label" data-i18n="info.guest">主页访客</span><span class="value" data-i18n="info.guestV">同学、老师、亲人、访客</span></li>
+        </ul>
+        <div class="quote" data-i18n="info.quote">
+          “正在学习大学课程的大一新生，重点在把课程学好，平常也喜欢音乐、猫和乐器。”
+        </div>
+      </section>
+    </section>
+
+    <!-- 数字分身 -->
+    <section class="view" id="view-chat">
+      <section class="card chatbox">
+        <div class="chat-head">
+          <div class="mini-avatar">🤖</div>
+          <div class="who">
+            <strong data-i18n="chat.head">郭家钰的数字分身 🤖</strong>
+            <small data-i18n="chat.sub">我在线上，问问我吧</small>
+          </div>
+          <span class="online" data-i18n="chat.online">在线</span>
+        </div>
+
+        <div class="messages" id="messages"></div>
+
+        <div class="chat-suggest" id="suggest">
+          <button class="suggest-btn" data-q="你是谁？" data-i18n="chat.suggest1">你是谁？</button>
+          <button class="suggest-btn" data-q="你在干什么？" data-i18n="chat.suggest2">你在干什么？</button>
+          <button class="suggest-btn" data-q="你关心的方向有什么？" data-i18n="chat.suggest3">你关心的方向有什么？</button>
+          <button class="suggest-btn" data-q="你有什么兴趣爱好？" data-i18n="chat.suggest4">你有什么兴趣爱好？</button>
+        </div>
+
+        <div class="chat-input">
+          <input id="input" type="text" placeholder="向数字分身提问…" autocomplete="off" data-i18n-placeholder="chat.ph" />
+          <button id="send" data-i18n="chat.send">发送</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- 联系我 -->
+    <section class="view" id="view-contact">
+      <section class="card">
+        <h2><span class="dot"></span><span data-i18n="contact.title">联系我 📮</span></h2>
+        <div class="contact-list">
+          <div class="contact-item">
+            <span class="c-label" data-i18n="contact.tju">邮箱 · tju</span>
+            <span class="c-mail"><a href="mailto:joeyguo1234@tju.edu.cn">joeyguo1234@tju.edu.cn</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="c-label" data-i18n="contact.polyu">邮箱 · polyu</span>
+            <span class="c-mail"><a href="mailto:jiayu.guo@connect.polyu.cn">jiayu.guo@connect.polyu.cn</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="c-label" data-i18n="contact.personal">个人邮箱</span>
+            <span class="c-mail"><a href="mailto:joeyguo1234@outlook.com">joeyguo1234@outlook.com</a></span>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- 项目展示 -->
+    <section class="view" id="view-projects">
+      <section class="card">
+        <h2><span class="dot"></span><span data-i18n="projects.title">项目展示 🚀</span></h2>
+        <div class="project-list">
+
+          <details class="project-item" open>
+            <summary>
+              <span class="p-icon">📖</span>
+              <span class="p-main">
+                <span class="p-title" data-i18n="projects.p1Title">我的学业进度</span>
+                <span class="p-sub" data-i18n="projects.p1Sub">课程学习走到哪一步</span>
+              </span>
+              <span class="p-status ing" data-i18n="projects.p1Status">大一上 · 进行中</span>
+              <span class="p-caret">▶</span>
+            </summary>
+            <div class="p-detail">
+              <p data-i18n="projects.p1Detail">目前处于「大一上 · 进行中 ing」阶段，正按课程节奏推进。</p>
+              <ul>
+                <li data-i18n="projects.p1Li1">✅ 大一上 — 进行中（当前）</li>
+                <li data-i18n="projects.p1Li2">⏳ 大一寒假 — 未开始</li>
+                <li data-i18n="projects.p1Li3">⏳ 大一下 — 未开始</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="project-item">
+            <summary>
+              <span class="p-icon">🔬</span>
+              <span class="p-main">
+                <span class="p-title" data-i18n="projects.p2Title">学习项目与实践</span>
+                <span class="p-sub" data-i18n="projects.p2Sub">课程实践与自学进展</span>
+              </span>
+              <span class="p-status ing" data-i18n="projects.p2Status">进阶中</span>
+              <span class="p-caret">▶</span>
+            </summary>
+            <div class="p-detail">
+              <ul><li data-i18n="projects.p2Li1">[进阶中] 课程实践：线性代数与矩阵运算（为后续<span class="term">脑电信号</span>矩阵处理打基础）</li><li data-i18n="projects.p2Li2">[进阶中] <span class="term">Python</span>基础编程与信号处理入门</li><li data-i18n="projects.p2Li3">[计划中] <span class="term">脑电信号（EEG）</span>数据分析小项目、尝试<span class="term">OpenBCI</span>模拟数据跑通滤波算法</li><li data-i18n="projects.p2Li4">[日常] 阅读<span class="term">脑机接口</span>科普与论文摘要的读书笔记</li></ul>
+            </div>
+          </details>
+
+          <details class="project-item">
+            <summary>
+              <span class="p-icon">🏆</span>
+              <span class="p-main">
+                <span class="p-title" data-i18n="projects.p3Title">我的学习成果</span>
+                <span class="p-sub" data-i18n="projects.p3Sub">成绩、证书与作品</span>
+              </span>
+              <span class="p-status ing" data-i18n="projects.p3Status">积累中</span>
+              <span class="p-caret">▶</span>
+            </summary>
+            <div class="p-detail">
+              <p data-i18n="projects.p3Detail">持续积累中，后续将更新编程代码 Demo、实验报告与相关证书。</p>
+            </div>
+          </details>
+
+        </div>
+      </section>
+    </section>
+
+    <!-- 给我的建议和留言 -->
+    <section class="view" id="view-suggest">
+      <section class="card">
+        <h2><span class="dot"></span><span data-i18n="suggest.title">给我的建议和留言 💬</span></h2>
+        <p class="suggest-tip" data-i18n="suggest.tip">告诉我你的身份和想给的建议方向，再写几句话～</p>
+
+        <form class="suggest-form" id="suggestForm">
+          <label><span data-i18n="suggest.roleLabel">我是谁</span>
+            <select id="sRole">
+              <option value="同学" data-i18n="role.classmate">同学</option>
+              <option value="老师" data-i18n="role.teacher">老师</option>
+              <option value="亲人" data-i18n="role.family">亲人</option>
+              <option value="朋友" data-i18n="role.friend">朋友</option>
+              <option value="访客" data-i18n="role.visitor">访客</option>
+            </select>
+          </label>
+          <label><span data-i18n="suggest.dirLabel">建议方向</span>
+            <select id="sDir">
+              <option value="学业" data-i18n="dir.study">学业</option>
+              <option value="音乐" data-i18n="dir.music">音乐</option>
+              <option value="生活" data-i18n="dir.life">生活</option>
+              <option value="其他" data-i18n="dir.other">其他</option>
+            </select>
+          </label>
+          <span class="field-full"><span data-i18n="suggest.msgLabel">留言内容</span>
+            <textarea id="sText" placeholder="写几句想对我说的话、给我的建议…" required data-i18n-placeholder="suggest.msgPh"></textarea>
+          </span>
+          <span class="actions">
+            <button type="submit" data-i18n="suggest.submit">提交留言</button>
+            <span class="form-note" data-i18n="suggest.note">🔒 反馈不会公开，只有我能看到</span>
+          </span>
+        </form>
+
+        <!-- V3：提交状态提示（成功 / 失败 / 提交中） -->
+        <p class="suggest-status" id="suggestStatus" role="status" aria-live="polite"></p>
+      </section>
+    </section>
+
+    <!-- 教育背景 -->
+    <section class="view" id="view-education">
+      <section class="card">
+        <h2><span class="dot"></span><span data-i18n="edu.title">教育背景</span></h2>
+        <div class="edu-list">
+
+          <div class="edu-item">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-body">
+              <span class="edu-school" data-i18n="edu.school1">天津大学香港理工大学深圳未来技术学院</span>
+              <span class="edu-major" data-i18n="edu.major1">大一(在读)</span>
+              <span class="edu-meta" data-i18n="edu.meta1">本科 · 2026 入学 · 在读</span>
+              <div class="edu-facts">
+                <span class="edu-fact"><span class="edu-k" data-i18n="edu.kMajor">专业</span><span class="edu-v" data-i18n="edu.vMajor"><span class="term">智能医学工程</span></span></span>
+                <span class="edu-fact"><span class="edu-k" data-i18n="edu.kTrack">方向</span><span class="edu-v" data-i18n="edu.vTrack"><span class="term">脑机接口</span></span></span>
+              </div>
+              <div class="edu-courses">
+                <span class="edu-k" data-i18n="edu.kCore">核心课程</span>
+                <span class="edu-chips">
+                  <span class="edu-chip" data-i18n="edu.core1">微积分</span>
+                  <span class="edu-chip" data-i18n="edu.core2">线性代数</span>
+                </span>
+              </div>
+              <div class="edu-courses">
+                <span class="edu-k" data-i18n="edu.kProject">项目制课程</span>
+                <span class="edu-chips">
+                  <span class="edu-chip" data-i18n="edu.project1">计算机科学与技术及人工智能基础</span>
+                  <span class="edu-chip" data-i18n="edu.project2">计算机程序设计</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </section>
+
+    <!-- 实习经历 -->
+    <section class="view" id="view-intern">
+      <section class="card">
+        <h2><span class="dot"></span><span data-i18n="intern.title">实习经历</span></h2>
+        <div class="intern-list">
+
+          <div class="intern-item">
+            <div class="intern-icon">💼</div>
+            <div class="intern-main">
+              <span class="intern-role" data-i18n="intern.role1">暂无实习经历</span>
+              <span class="intern-org" data-i18n="intern.org1">大一阶段,尚未参加实习</span>
+            </div>
+            <span class="intern-status soon" data-i18n="intern.status1">未进行</span>
+          </div>
+
+        </div>
+        <p class="intern-note" data-i18n="intern.note">有了实习经历会第一时间更新到这里。</p>
+      </section>
+    </section>
+
+  </main>
+
+  <footer data-i18n="footer">郭家钰 · 个人主页第一版原型 · 简约清新</footer>
+
+
+  <div class="pager">
+    <div class="pager-nav">
+      <button id="pagerPrev" class="pager-btn" type="button" aria-label="上一版块">‹</button>
+      <span id="pagerLabel" class="pager-label">主页</span>
+      <button id="pagerNext" class="pager-btn" type="button" aria-label="下一版块">›</button>
+    </div>
+    <button id="pagerHome" class="pager-home" type="button" aria-label="返回主页">主页</button>
+  </div>
+  <!-- V3：Supabase 官方客户端（必须在 main.js 之前加载） -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
