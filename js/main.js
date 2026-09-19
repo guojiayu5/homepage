@@ -74,6 +74,7 @@
         "projects.p3Detail": "持续积累中，后续将更新编程代码 Demo、实验报告与相关证书。",
         "suggest.title": "给我的建议和留言 💬", "suggest.tip": "告诉我你的身份和想给的建议方向，再写几句话～",
         "suggest.roleLabel": "我是谁", "suggest.dirLabel": "建议方向", "suggest.msgLabel": "留言内容",
+        "suggest.nameLabel": "昵称（选填）", "suggest.namePh": "怎么称呼你（可留空）",
         "suggest.msgPh": "写几句想对我说的话、给我的建议…", "suggest.submit": "提交留言",
         "suggest.note": "🔒 反馈不会公开，只有我能看到", "suggest.saving": "正在提交…",
         "suggest.success": "已收到，谢谢！只有我能看到你的反馈 ✅",
@@ -125,6 +126,7 @@
         "projects.p3Detail": "Still accumulating — code demos, lab reports and related certificates will be added here later.",
         "suggest.title": "Suggestions & Messages 💬", "suggest.tip": "Tell me who you are and a topic, then leave a few words～",
         "suggest.roleLabel": "I am", "suggest.dirLabel": "Topic", "suggest.msgLabel": "Message",
+        "suggest.nameLabel": "Nickname (optional)", "suggest.namePh": "What should I call you? (optional)",
         "suggest.msgPh": "Write a few words for me, or give me some advice…", "suggest.submit": "Submit",
         "suggest.note": "🔒 Your feedback is private — only I can see it", "suggest.saving": "Submitting…",
         "suggest.success": "Received — thank you! Only I can see your feedback ✅",
@@ -362,6 +364,7 @@
       const form = document.getElementById("suggestForm");
       const roleSel = document.getElementById("sRole");
       const dirSel = document.getElementById("sDir");
+      const nameEl = document.getElementById("sName");
       const textEl = document.getElementById("sText");
       const statusEl = document.getElementById("suggestStatus");
       const submitBtn = form ? form.querySelector('button[type="submit"]') : null;
@@ -387,7 +390,7 @@
 
         // 按数据库 feedback 表的字段组织数据
         const payload = {
-          name: null,                                 // 当前表单暂无昵称字段，留空
+          name: (nameEl && nameEl.value.trim()) ? nameEl.value.trim() : null,  // 昵称（选填）：留空存 null
           relation: roleSel ? roleSel.value : null,   // 我是谁 -> relation
           topic: dirSel ? dirSel.value : null,        // 建议方向 -> topic
           device: detectDevice(),                     // 自动识别访客设备

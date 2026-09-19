@@ -760,7 +760,7 @@
       margin-bottom: 24px;
     }
     .suggest-form label { display: flex; flex-direction: column; gap: 6px; font-size: 0.92rem; color: var(--purple-deep); font-weight: 600; }
-    .suggest-form select, .suggest-form textarea {
+    .suggest-form select, .suggest-form textarea, .suggest-form input {
       width: 100%;
       border: 1px solid var(--line);
       border-radius: 12px;
@@ -772,7 +772,7 @@
       font-family: inherit;
       font-weight: 400;
     }
-    .suggest-form select:focus, .suggest-form textarea:focus { border-color: var(--accent);
+    .suggest-form select:focus, .suggest-form textarea:focus, .suggest-form input:focus { border-color: var(--accent);
       box-shadow: 0 0 0 3px var(--cyan-soft); background: #f0e6db; }
     .suggest-form .field-full { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 0.92rem; color: var(--purple-deep); font-weight: 600; }
     .suggest-form textarea { min-height: 110px; resize: vertical; }
