@@ -296,7 +296,7 @@
       from { transform: rotate(0deg); }
       to   { transform: rotate(360deg); }
     }
-    .cover-avatar-emoji { font-size: clamp(88px, 13vw, 150px); line-height: 1; }
+    .cover-avatar-img { width: 90%; height: 90%; object-fit: contain; display: block; }
     /* 闂傚倷绀佸﹢閬嶆惞鎼淬劌鍌ㄥù鐘差儏濡ê銆掑锝呬壕閻庢鍠栭悥濂稿垂妤ｅ啯鍤戞い鎺戝€愰姀銈嗏拺闁圭娴烽埊鏇㈡煟椤撗冩珝闁哄苯鑻…銊╁礋椤撗勯敜闂備焦鍎崇换鎰耿闁秴姹查柛鈩冾樅?*/
     .cover-intro {
       position: relative;
@@ -338,7 +338,9 @@
       border-color: var(--cyan-line);
       box-shadow: 0 22px 55px rgba(0,0,0,0.45), 0 0 0 12px rgba(0,0,0,0.12), inset 0 0 0 2px rgba(240,230,219,0.08);
     }
-    html[data-theme="night"] .cover-orb::before { border-color: var(--cyan-line); }
+    html[data-theme="night"] .cover-orb::before { border-color: var(--cyan-line); }
+    /* 夜间模式：黑线稿反色成白线，否则深色圆盘上看不见 */
+    html[data-theme="night"] .cover-avatar-img { filter: invert(1); }
     html[data-theme="night"] .cover-intro {
       background: rgba(30,33,24,0.85);
       border-color: var(--cyan-line);
@@ -478,6 +480,9 @@
       gap: 8px;
       color: var(--purple-deep);
     }
+    /* Lucide 线性图标：1em 跟随字号缩放，颜色跟随 currentColor，替代原 emoji */
+    .lu-icon { width: 1em; height: 1em; flex: none; vertical-align: -0.125em; }
+
     .card h2 .dot {
       width: 8px; height: 8px; border-radius: 50%;
       background: var(--accent);
@@ -824,7 +829,7 @@
       .edu-chip { font-size: 0.84rem; }
       .cover-left { padding: 36px 20px 26px 22px; }
       .cover-orb { top: 38%; width: 190px; }
-      .cover-avatar-emoji { font-size: 84px; }
+      .cover-avatar-img { width: 92%; height: 92%; }
       .cover-intro { max-width: none; font-size: 0.92rem; }
       .cover-major { font-size: 0.9rem; letter-spacing: 0; }
       .home-cover {
